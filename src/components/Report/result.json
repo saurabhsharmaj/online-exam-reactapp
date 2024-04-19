@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "name":"Akshit",
+        "emailId":"akshit@gmail.com",
+        "score":"50",
+        "testTime":"10/04/2024 11:00"
+    },   
+    {
+        "id":2,
+        "name":"Nikita",
+        "emailId":"nikita@gmail.com",
+        "score":"100",
+        "testTime":"10/04/2024 10:00"
+    }
+]
