@@ -1,0 +1,23 @@
+[
+      {
+        "question": "what is capital of India ?",
+        "multichoice": true,
+        "subject":"hindi",
+        "option": {
+          "a": "delhi",
+          "b": "jaipur",
+          "c": "rajasthan",
+          "d": "goa"
+        }
+      },{
+        "question": "Gold mines in the India ?",
+        "multichoice": true,
+        "subject":"hindi",
+        "option": {
+          "a": "delhi",
+          "b": "jaipur",
+          "c": "rajasthan",
+          "d": "Karnataka"
+        }
+      }
+]
