@@ -19,5 +19,15 @@
           "c": "rajasthan",
           "d": "Karnataka"
         }
+      },{
+        "question": "Capital of UP ?",
+        "multichoice": true,
+        "subject":"hindi",
+        "option": {
+          "a": "delhi",
+          "b": "jaipur",
+          "c": "Lakhnow",
+          "d": "Karnataka"
+        }
       }
 ]

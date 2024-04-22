@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { FC, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import HeaderBar from '../Nav/Nav';
 import JsonData from './questions.json'
 
@@ -56,6 +56,28 @@ function Question(props) {
         )
     }
 )
+
+const [questionForm, setQuestionForm] = useState({
+  name: "",
+  email: "",
+  type: "",
+  questions:[{
+    "question":"",
+    "optionA": "",
+    "optionB": "",
+    "optionC": "",
+    "optionD": "",
+    "selectedOtion": ""
+  }]
+});
+
+let navigate = useNavigate();
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  console.log(questionForm);
+  navigate("/result", { state: { form: questionForm } });
+};
   const  userExamDetail  = useLocation();
   console.log(userExamDetail);
    return (
@@ -66,10 +88,17 @@ function Question(props) {
        <p>Email: {userExamDetail.state==null?'-':userExamDetail.state.form.email}</p>
        <p>Type: {userExamDetail.state==null?'-':userExamDetail.state.form.type}</p>
        <hr></hr>
+       <form onSubmit={handleSubmit}>
        <table>
         
           {QuestionData}
        </table>
+
+       <div className="form-control">
+          <label></label>
+          <button type="submit">Finish Exam</button>
+        </div>
+       </form>
      </div>
    );
  }
